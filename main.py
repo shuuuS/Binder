@@ -1,40 +1,29 @@
 from os import scandir, rename
-from os.path import splitext, exists, join, dirname, realpath
+from os.path import splitext, exists, join
 from shutil import move
 from time import sleep
-import getpass
-
 import logging
 
-from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-
-USER_NAME = getpass.getuser()
-
-
-def add_to_startup(file_path=""):
-    if file_path == "":
-        file_path = dirname(realpath(__file__))
-    bat_path = r'C:/Users/Kuba/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup' 
-    with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
-        bat_file.write(r'start "" "%s"' % file_path)
+from watchdog.observers import Observer
 
 source_dir = "C:/Users/Kuba/Downloads"
 zips_dir = "C:/Users/Kuba/Downloads/ZIPY"
 images_dir = "C:/Users/Kuba/Downloads/IMAGES"
 docs_dir = "C:/Users/Kuba/Downloads/PDF"
+video_dir = "C:/Users/Kuba/Downloads/WIDEO"
 
-
-# ? supported image types
+# supported image types
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
 
-# ? supported Document types
+# supported Document types
 document_extensions = [".doc", ".docx", ".odt", ".xls", ".xlsx", ".txt", ".pdf"]
 
-# ? supported zip/rar types
+# supported zip/rar types
 zip_extensions = ['.rar', ".zip"]
 
-
+# supported video types
+video_extensions = [".mp4", ".mov"]
 
 def make_unique(dest, name):
     filename, extension = splitext(name)
@@ -63,7 +52,13 @@ class ChooseDirectory(FileSystemEventHandler):
                 self.check_document_files(entry, name)
                 self.check_image_files(entry, name)
                 self.check_zip_files(entry, name)
+                self.check_video_files(entry, name)
 
+    def check_video_files(self, entry, name):  # * Checks all Video Files
+        for video_extension in video_extensions:
+            if name.endswith(video_extension) or name.endswith(video_extension.upper()):
+                move_file(video_dir, entry, name)
+                logging.info(f"Moved video file: {name}")
 
     def check_document_files(self, entry, name):  # * Checks all Document Files
         for documents_extension in document_extensions:
@@ -82,8 +77,6 @@ class ChooseDirectory(FileSystemEventHandler):
             if name.endswith(zip_extension) or name.endswith(zip_extension.upper()):
                 move_file(zips_dir, entry, name)
                 logging.info(f"Moved zip/rar file: {name}")
-
-
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO,
