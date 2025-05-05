@@ -1,10 +1,10 @@
 # PATHS TO FOLDERS
-source_dir = "C:/Users/ikluz/Downloads"
-zips_dir = "C:/Users/ikluz/Downloads/ZIPY"
-images_dir = "C:/Users/ikluz/Downloads/IMAGES"
-docs_dir = "C:/Users/ikluz/Downloads/PDF"
-video_dir = "C:/Users/ikluz/Downloads/WIDEO"
-exe_dir = "C:/Users/ikluz/Downloads/EXEKI"
+source_dir = "PATH/WHERE/YOU/SAVE/FILES"
+zips_dir = "PATH/TO/SPECIFIC_FILE"
+images_dir = "PATH/TO/SPECIFIC_FILE"
+docs_dir = "PATH/TO/SPECIFIC_FILE"
+video_dir = "PATH/TO/SPECIFIC_FILE"
+exe_dir = "PATH/TO/SPECIFIC_FILE"
 
 # supported image types
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
