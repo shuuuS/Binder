@@ -32,6 +32,11 @@ Remember: i included only the most common supported file types for extensions (i
 ## Second step
 Remember to start from file named 'main.py' and download supported python libraries from requirements.txt
 
-## How program works?
-Normally program will works when you start python script (main.py) but i suggest to add that file to startup folder (for windows: Press the Windows key + R to open the Run dialog and
+# How program works?
+Normally program will works when you start python script (main.py).
+I suggest to add that file to startup folder (for windows: Press the Windows key + R to open the Run dialog and
 Type shell:startup)
+
+## Example usage
+<img width="462" height="70" alt="image" src="https://github.com/user-attachments/assets/c9d3a59c-a383-4506-aa25-c23dc17125be" />
+
