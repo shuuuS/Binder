@@ -6,3 +6,6 @@
 
 # __pycache__
 __pycache__/*
+
+# Personal setup in setup.py
+setup.py
