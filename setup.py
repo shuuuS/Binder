@@ -1,10 +1,10 @@
 # PATHS TO FOLDERS
-source_dir = r"C:\Users\Kuba\Downloads"
-zips_dir = r"C:\Users\Kuba\Downloads\ZIPS"
-images_dir = r"C:\Users\Kuba\Downloads\IMAGES"
-docs_dir = r"C:\Users\Kuba\Downloads\DOCS"
-video_dir = r"C:\Users\Kuba\Downloads\VIDEOS"
-exe_dir = r"C:\Users\Kuba\Downloads\EXES"
+source_dir = "PATH/WHERE/YOU/SAVE/FILES"
+zips_dir = "PATH/TO/SPECIFIC_FILE"
+images_dir = "PATH/TO/SPECIFIC_FILE"
+docs_dir = "PATH/TO/SPECIFIC_FILE"
+video_dir = "PATH/TO/SPECIFIC_FILE"
+exe_dir = "PATH/TO/SPECIFIC_FILE"
 
 # supported image types
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
@@ -12,7 +12,7 @@ image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
 # supported document types
 document_extensions = [".doc", ".docx", ".odt", ".xls", ".xlsx", ".txt", ".pdf"]
 
-# supported zip\rar types
+# supported zip/rar types
 zip_extensions = ['.rar', ".zip"]
 
 # supported video types
