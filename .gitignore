@@ -2,7 +2,7 @@
 .venv
 
 # vscode json settings
-.vscode
+
 
 # __pycache__
 __pycache__/*
