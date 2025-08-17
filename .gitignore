@@ -1,18 +1,11 @@
 # Virtul environment
 .venv
 
-<<<<<<< Updated upstream
 # vscode json settings
 
 
-=======
->>>>>>> Stashed changes
 # __pycache__
 __pycache__/*
 
 # Personal setup in setup.py
-<<<<<<< Updated upstream
 setup.py
-=======
-setup.py
->>>>>>> Stashed changes

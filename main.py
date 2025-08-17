@@ -22,31 +22,31 @@ class ChooseDirectory(FileSystemEventHandler):
                 self.check_video_files(entry, name)
                 self.check_exe_files(entry, name)
 
-    def check_video_files(self, entry, name):  # Checks all video files
+    def check_video_files(self, entry, name):  
         for video_extension in video_extensions:
             if name.endswith(video_extension) or name.endswith(video_extension.upper()):
                 move_file(video_dir, entry, name)
                 logging.info(f"Moved video file: {name}")
 
-    def check_document_files(self, entry, name):  # Checks all document files
+    def check_document_files(self, entry, name):  
         for documents_extension in document_extensions:
             if name.endswith(documents_extension) or name.endswith(documents_extension.upper()):
                 move_file(docs_dir, entry, name)
                 logging.info(f"Moved document/pdf file: {name}")
 
-    def check_image_files(self, entry, name): # Check all Image files
+    def check_image_files(self, entry, name): 
         for img_extension in image_extensions:
             if name.endswith(img_extension) or name.endswith(img_extension.upper()):
                 move_file(images_dir, entry, name)
                 logging.info(f"Moved img file: {name}")
 
-    def check_zip_files(self, entry, name): # Check all zip/rar files
+    def check_zip_files(self, entry, name): 
         for zip_extension in zip_extensions:
             if name.endswith(zip_extension) or name.endswith(zip_extension.upper()):
                 move_file(zips_dir, entry, name)
                 logging.info(f"Moved zip/rar file: {name}")
 
-    def check_exe_files(self, entry, name): # Check all exe files
+    def check_exe_files(self, entry, name): 
         for exe_extension in exe_extensions:
             if name.endswith(exe_extension) or name.endswith(exe_extension.upper()):
                 move_file(exe_dir, entry, name)
