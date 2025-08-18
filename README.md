@@ -52,6 +52,7 @@ Before make it working silently in background, check your setups manually by run
 
 # How to set the script to run at system startup?
 It can be done by many ways but i will tell only about one of them:
+
 For windows:
 1) Press the Windows key + R to open the Run dialog and Type shell:startup)
 2) Make there new text file - Binder.txt and copy/paste below code:
