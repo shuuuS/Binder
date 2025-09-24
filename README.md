@@ -19,30 +19,31 @@ Include download needed library from requirements.txt
 
 Configuration is by running a file named settings.py:
 ```python
-# PATHS TO FOLDERS
+file_types = {
+    "image_extensions": [".jpg", ".jpeg", ".png", ".gif", ".bmp"],
+    "document_extensions": [".doc", ".docx", ".docm", ".odt", ".xls", ".xlsx", ".xlsm", ".txt", ".pdf"],
+    "zip_extensions": [".rar", ".zip"],
+    "video_extensions": [".mp4", ".mov", ".mp3"],
+    "exe_extensions": [".exe"],
+    "soft_extensions": [".hex", ".bin"],
+}
+
 source_dir = "PATH_TO_DOWNLOAD_FOLDER"
-zips_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
-images_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
-docs_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+image_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+document_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+zip_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
 video_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
 exe_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+soft_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
 
-# supported image types
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
-
-# supported document types
-document_extensions = [".doc", ".docx", ".odt", ".xls", ".xlsx", ".txt", ".pdf"]
-
-# supported zip\rar types
-zip_extensions = ['.rar', ".zip"]
-
-# supported video types
+document_extensions = [".doc", ".docx", ".docm", ".odt", ".xls", ".xlsx", ".xlsm", ".txt", ".pdf"]
+zip_extensions = [".rar", ".zip"]
 video_extensions = [".mp4", ".mov", ".mp3"]
-
-# supported exe types
 exe_extensions = [".exe"]
+soft_extensions = [".hex", ".bin"]
 ```
-Remember: i included only the most common supported file types for extensions (if you need, u can add more)
+You can browse folder where you want save your files and also which extensions include.
 
 # Usage
 Before make it working silently in background, check your setups manually by running script and download random file (e.g. cat image from google photos :D)
