@@ -9,9 +9,6 @@ class SetupApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Setup Configuration")
-        
-        
-        
         self.source_dir = {}
         self.paths = {}
         self.extension_vars = {}
@@ -28,7 +25,7 @@ class SetupApp:
         if hasattr(setup, "source_dir"):
             self.source_dir.set(setup.source_dir)
 
-        # Load existing settings from setup2.py
+        # Load existing settings from setup.py
         for category in self.paths:
             path_var = f"{category}_dir"
             ext_var = f"{category}_extensions"
