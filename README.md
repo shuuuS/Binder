@@ -17,7 +17,7 @@ Include download needed library from requirements.txt
 * Destination folders for each file type
 * Which extra extensions should be handled by which folder
 
-Configuration is done in a file called setup.py:
+Configuration is by running a file named settings.py:
 ```python
 # PATHS TO FOLDERS
 source_dir = "PATH_TO_DOWNLOAD_FOLDER"
