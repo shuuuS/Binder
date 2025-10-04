@@ -4,17 +4,20 @@ file_types = {
     "zip_extensions": [".rar", ".zip"],
     "video_extensions": [".mp4", ".mov", ".mp3"],
     "exe_extensions": [".exe"],
+    "soft_extensions": [".hex", ".bin"],
 }
 
-source_dir = "C:/Users/ikluz/Downloads"
-image_dir = "C:/Users/ikluz/Downloads/IMAGES"
-document_dir = "C:/Users/ikluz/Downloads/PDF"
-zip_dir = "C:/Users/ikluz/Downloads/ZIPY"
-video_dir = "C:/Users/ikluz/Downloads/WIDEO"
-exe_dir = "C:/Users/ikluz/Downloads/EXEKI"
+source_dir = "PATH_TO_DOWNLOAD_FOLDER"
+image_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+document_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+zip_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+video_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+exe_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
+soft_dir = "PATH_TO_FOLDER_WITH_SPECIFIC_EXTENSION"
 
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
 document_extensions = [".doc", ".docx", ".docm", ".odt", ".xls", ".xlsx", ".xlsm", ".txt", ".pdf"]
 zip_extensions = [".rar", ".zip"]
 video_extensions = [".mp4", ".mov", ".mp3"]
 exe_extensions = [".exe"]
+soft_extensions = [".hex", ".bin"]
