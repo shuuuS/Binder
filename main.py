@@ -31,19 +31,19 @@ class ChooseDirectory(FileSystemEventHandler):
     def check_document_files(self, entry, name):  
         for documents_extension in document_extensions:
             if name.endswith(documents_extension) or name.endswith(documents_extension.upper()):
-                move_file(docs_dir, entry, name)
+                move_file(document_dir, entry, name)
                 logging.info(f"Moved document/pdf file: {name}")
 
     def check_image_files(self, entry, name): 
         for img_extension in image_extensions:
             if name.endswith(img_extension) or name.endswith(img_extension.upper()):
-                move_file(images_dir, entry, name)
+                move_file(image_dir, entry, name)
                 logging.info(f"Moved img file: {name}")
 
     def check_zip_files(self, entry, name): 
         for zip_extension in zip_extensions:
             if name.endswith(zip_extension) or name.endswith(zip_extension.upper()):
-                move_file(zips_dir, entry, name)
+                move_file(zip_dir, entry, name)
                 logging.info(f"Moved zip/rar file: {name}")
 
     def check_exe_files(self, entry, name): 
